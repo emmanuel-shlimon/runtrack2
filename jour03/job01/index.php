@@ -1,11 +1,4 @@
 <?php
-echo "<!DOCTYPE html>\n";
-echo "<html>\n";
-echo "<head>\n";
-echo "    <title>Vérification de parité</title>\n";
-echo "</head>\n";
-echo "<body>\n";
-
 // Tableau des nombres
 $numbers = [76, 421, 123, 96, 390, 600, 201];
 
@@ -17,7 +10,4 @@ foreach ($numbers as $number) {
         echo $number . " est impaire<br />\n";
     }
 }
-
-echo "</body>\n";
-echo "</html>";
 ?>
