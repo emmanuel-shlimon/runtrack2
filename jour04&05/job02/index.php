@@ -23,8 +23,6 @@ echo '</tr>';
 
 {
     echo '<tr>';
-    echo '<td>' . htmlspecialchars($key) . '</td>';
-    echo '<td>' . htmlspecialchars($value) . '</td>';
     echo '</tr>';
 }
 
