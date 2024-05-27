@@ -26,7 +26,6 @@ echo '</tr>';
     echo '</tr>';
 }
 
-// Fin du tableau HTML
 echo '</table>';
 echo '</body>';
 echo '</html>';
