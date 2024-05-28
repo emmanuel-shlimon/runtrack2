@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison en PHP</title>
-    <style>
-        .house {
-            font-family: monospace;
-            white-space: pre;
-        }
-    </style>
+    <title>Maison en PHP avec Styles</title>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["style"])) {
+        $selectedStyle = $_POST["style"];
+        echo "<link rel='stylesheet' type='text/css' href='$selectedStyle.css'>";
+    }
+    ?>
 </head>
 <body>
+    <form method="POST" action="">
+        <label for="style">Choisissez un style :</label>
+        <select id="style" name="style">
+            <option value="style1">Style 1</option>
+            <option value="style2">Style 2</option>
+            <option value="style3">Style 3</option>
+        </select>
+        <button type="submit">Appliquer le style</button>
+    </form>
+
+    <!-- Votre formulaire pour dessiner la maison -->
     <form method="POST" action="">
         <label for="largeur">Largeur :</label>
         <input type="text" id="largeur" name="largeur" required>
@@ -21,7 +32,7 @@
     </form>
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["largeur"]) && isset($_POST["hauteur"])) {
         $largeur = intval($_POST["largeur"]);
         $hauteur = intval($_POST["hauteur"]);
 

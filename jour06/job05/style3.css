@@ -1,0 +1,22 @@
+body {
+    background-color: lightcoral;
+    font-family: 'Times New Roman', serif;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 2px dotted #000;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #da190b;
+}
