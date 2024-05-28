@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <form method="get" onsubmit="return drawHouse()">
+    <form onsubmit="return drawHouse()">
         <label for="largeur">Largeur:</label>
         <input type="text" id="largeur" name="largeur" required>
         <label for="hauteur">Hauteur:</label>
@@ -23,9 +23,8 @@
 
     <script>
         function drawHouse() {
-            const params = new URLSearchParams(window.location.search);
-            const largeur = parseInt(params.get('largeur'), 10);
-            const hauteur = parseInt(params.get('hauteur'), 10);
+            const largeur = parseInt(document.getElementById('largeur').value, 10);
+            const hauteur = parseInt(document.getElementById('hauteur').value, 10);
             const maisonElement = document.getElementById('maison');
 
             if (isNaN(largeur) || isNaN(hauteur) || largeur <= 0 || hauteur <= 0) {
